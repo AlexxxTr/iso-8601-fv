@@ -1,6 +1,9 @@
 {
     "name": "iso-8601-fv",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "private": false,
     "author": { "name": "Alexander Truyaert" },
     "version": "0.0.1",
