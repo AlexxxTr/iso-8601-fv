@@ -1,6 +1,8 @@
 {
     "name": "iso-8601-fv",
     "license": "MIT",
+    "private": false,
+    "author": { "name": "Alexander Truyaert" },
     "version": "0.0.1",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
