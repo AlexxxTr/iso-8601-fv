@@ -5,7 +5,9 @@
         "access": "public"
     },
     "private": false,
-    "author": { "name": "Alexander Truyaert" },
+    "author": {
+        "name": "Alexander Truyaert"
+    },
     "version": "0.0.1",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
@@ -13,10 +15,13 @@
     "scripts": {
         "build": "tsup index.ts --format cjs,esm --dts",
         "release": "pnpm run build && changeset publish",
-        "lint": "tsc"
+        "lint": "eslint ."
     },
     "devDependencies": {
         "@changesets/cli": "^2.26.1",
+        "@typescript-eslint/eslint-plugin": "^5.57.0",
+        "@typescript-eslint/parser": "^5.57.0",
+        "eslint": "^8.37.0",
         "tsup": "^6.7.0",
         "typescript": "^5.0.2"
     }
