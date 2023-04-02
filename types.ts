@@ -1,11 +1,11 @@
-export type YEAR_NOTATION = "YYYY";
-export type CALENDAR_DATES_NOTATION = "YYYY-MM-DD" | "YYYY-MM" | "YYYYMMDD";
+export type YEAR_NOTATION = 'YYYY';
+export type CALENDAR_DATES_NOTATION = 'YYYY-MM-DD' | 'YYYY-MM' | 'YYYYMMDD';
 export type WEEK_DATES_NOTATION =
-  | "YYYY-Www"
-  | "YYYYWww"
-  | "YYYY-Www-D"
-  | "YYYYWwwD";
-export type ORDINAL_DATES_NOTATION = "YYYY-DDD" | "YYYYDDD";
+  | 'YYYY-Www'
+  | 'YYYYWww'
+  | 'YYYY-Www-D'
+  | 'YYYYWwwD';
+export type ORDINAL_DATES_NOTATION = 'YYYY-DDD' | 'YYYYDDD';
 export type DATES_NOTATION =
   | YEAR_NOTATION
   | CALENDAR_DATES_NOTATION

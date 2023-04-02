@@ -1,31 +1,38 @@
 {
-    "name": "iso-8601-fv",
-    "license": "MIT",
-    "publishConfig": {
-        "access": "public"
-    },
-    "private": false,
-    "author": {
-        "name": "Alexander Truyaert"
-    },
-    "version": "0.0.1",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsup index.ts --format cjs,esm --dts",
-        "release": "pnpm run build && changeset publish",
-        "lint": "eslint ."
-    },
-    "devDependencies": {
-        "@changesets/cli": "^2.26.1",
-        "@typescript-eslint/eslint-plugin": "^5.57.0",
-        "@typescript-eslint/parser": "^5.57.0",
-        "eslint": "^8.37.0",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "prettier": "^2.8.7",
-        "tsup": "^6.7.0",
-        "typescript": "^5.0.2"
-    }
+  "name": "iso-8601-fv",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "author": {
+    "name": "Alexander Truyaert"
+  },
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest --coverage",
+    "test:typecheck": "vitest typecheck"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
+  }
 }
