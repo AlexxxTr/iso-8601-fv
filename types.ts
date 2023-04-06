@@ -1,13 +1,35 @@
-export type YEAR_NOTATION = 'YYYY';
-export type CALENDAR_DATES_NOTATION = 'YYYY-MM-DD' | 'YYYY-MM' | 'YYYYMMDD';
-export type WEEK_DATES_NOTATION =
-  | 'YYYY-Www'
-  | 'YYYYWww'
-  | 'YYYY-Www-D'
-  | 'YYYYWwwD';
-export type ORDINAL_DATES_NOTATION = 'YYYY-DDD' | 'YYYYDDD';
-export type DATES_NOTATION =
-  | YEAR_NOTATION
-  | CALENDAR_DATES_NOTATION
-  | WEEK_DATES_NOTATION
-  | ORDINAL_DATES_NOTATION;
+// Const arrays (helpers for types);
+const yearNotation = 'YYYY';
+const calendarDatesNotation = ['YYYY-MM-DD', 'YYYY-MM', 'YYYYMMDD'] as const;
+const weekDatesNotation = [
+  'YYYY-Www',
+  'YYYYWww',
+  'YYYY-Www-D',
+  'YYYYWwwD',
+] as const;
+const ordinalDatesNotation = ['YYYY-DDD', 'YYYYDDD'] as const;
+
+const extendedFullTimeNotation = 'T[hh]:[mm]:[ss]';
+const extendedMediumTimeNotation = 'T[hh]:[mm]';
+const basicFullTimeNotation = 'T[hh][mm][ss]';
+const basicMediumTimeNotation = 'T[hh][mm]';
+const shortTimeNotation = 'T[hh]';
+
+// Types
+// Dates
+export type yearNotation = typeof yearNotation;
+export type calendarDatesNotation = (typeof calendarDatesNotation)[number];
+export type weekDatesNotation = (typeof weekDatesNotation)[number];
+export type ordinalDatesNotation = (typeof ordinalDatesNotation)[number];
+export type datesNotation =
+  | yearNotation
+  | calendarDatesNotation
+  | weekDatesNotation
+  | ordinalDatesNotation;
+
+// Times
+export type extendedFullTimeNotation = typeof extendedFullTimeNotation;
+export type extendedMediumTimeNotation = typeof extendedMediumTimeNotation;
+export type basicFullTimeNotation = typeof basicFullTimeNotation;
+export type basicMediumTimeNotation = typeof basicMediumTimeNotation;
+export type shortTimeNotation = typeof shortTimeNotation;
