@@ -1,6 +1,11 @@
 // Const arrays (helpers for types);
 export const yearNotation = 'YYYY';
-export const calendarDatesNotation = ['YYYY-MM-DD', 'YYYY-MM', 'YYYYMMDD', 'YYYYMM'] as const;
+export const calendarDatesNotation = [
+  'YYYY-MM-DD',
+  'YYYY-MM',
+  'YYYYMMDD',
+  'YYYYMM',
+] as const;
 export const weekDatesNotation = [
   'YYYY-Www',
   'YYYYWww',
@@ -35,3 +40,9 @@ export type extendedMediumTimeNotation = typeof extendedMediumTimeNotation;
 export type basicFullTimeNotation = typeof basicFullTimeNotation;
 export type basicMediumTimeNotation = typeof basicMediumTimeNotation;
 export type shortTimeNotation = typeof shortTimeNotation;
+export type timeNotations =
+  | extendedFullTimeNotation
+  | extendedMediumTimeNotation
+  | basicFullTimeNotation
+  | basicMediumTimeNotation
+  | shortTimeNotation;
