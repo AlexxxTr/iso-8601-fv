@@ -1,10 +1,10 @@
-import { timeNotations } from '../types';
-
-export function parseTime(date: number | Date | string, format: timeNotations) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.parseTime = void 0;
+function parseTime(date, format) {
     if (typeof date === 'number' || typeof date === 'string')
         date = new Date(date);
-
-    let time = Intl.DateTimeFormat(undefined, {
+    var time = Intl.DateTimeFormat(undefined, {
         hour: '2-digit',
         minute: format.includes('[mm]') ? '2-digit' : undefined,
         second: format.includes('[ss]') ? '2-digit' : undefined,
@@ -12,12 +12,9 @@ export function parseTime(date: number | Date | string, format: timeNotations) {
         hourCycle: 'h24',
         hour12: false,
     }).format(date);
-
-
-    console.log(time);
-    if (!format.includes(':')) time = time.replaceAll(':', '');
-
-    return `T${time}`;
+    if (!format.includes(':'))
+        time = time.replaceAll(':', '');
+    return "T".concat(time);
 }
-
+exports.parseTime = parseTime;
 console.log(parseTime(Date.now(), "T[hh]:[mm]:[ss]"));
