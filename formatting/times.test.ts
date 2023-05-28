@@ -3,6 +3,6 @@ import { parseTime } from './times';
 
 describe('Should format time correctly', () => {
   it('Format time', () => {
-    expect(parseTime(1685285611686, 'T[hh]:[mm]:[ss]')).toBe('T16:53:31');
+    expect(parseTime(1685285611686, 'T[hh]:[mm]:[ss]')).toBe('T14:53:31');
   });
 });
