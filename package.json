@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
     "release": "pnpm run build && changeset publish",
-    "lint": "eslint .",
+    "lint": "tsc && eslint .",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest --coverage",
