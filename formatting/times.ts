@@ -8,11 +8,14 @@ export function parseTime(date: number | Date | string, format: timeNotations) {
     hour: '2-digit',
     minute: format.includes('[mm]') ? '2-digit' : undefined,
     second: format.includes('[ss]') ? '2-digit' : undefined,
+    timeZone: 'UTC'
   }).format(date);
+  
 
+  time
   if (!format.includes(':')) time = time.replaceAll(':', '');
 
   return `T${time}`;
 }
 
-console.log(parseTime(Date.now(), 'T[hh][mm]'));
+console.log(parseTime(1685285611686, 'T[hh][mm]'));

@@ -16,6 +16,7 @@ export function parseDate(date: DateParamter, form: datesNotation): string {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
+    timeZone: 'UTC',
   })
     .formatToParts(date)
     .filter((part) => part.type !== 'literal');
