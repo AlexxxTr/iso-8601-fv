@@ -79,10 +79,10 @@ export function calculateNumberOfWeeksInYear(date: Date) {
   lastDayLastYear = new Date(lastDayLastYear).setDate(31);
 
   const firstDayOfThisYear = Intl.DateTimeFormat(undefined, {
-    weekday: 'long',
+    weekday: 'long'
   }).format(firstDayThisYear);
   const lastDayOfLastYear = Intl.DateTimeFormat(undefined, {
-    weekday: 'long',
+    weekday: 'long'
   }).format(lastDayLastYear);
 
   return (
